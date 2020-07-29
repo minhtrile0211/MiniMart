@@ -1,0 +1,53 @@
+C:\Users\DELL\source\repos\Project1New\Project1New\bin\Debug\Project1New.exe.config
+C:\Users\DELL\source\repos\Project1New\Project1New\bin\Debug\Project1New.exe
+C:\Users\DELL\source\repos\Project1New\Project1New\bin\Debug\Project1New.pdb
+C:\Users\DELL\source\repos\Project1New\Project1New\obj\Debug\Project1New.csprojAssemblyReference.cache
+C:\Users\DELL\source\repos\Project1New\Project1New\obj\Debug\Project1New.CategoryCustomer.resources
+C:\Users\DELL\source\repos\Project1New\Project1New\obj\Debug\Project1New.CategoryEmployee.resources
+C:\Users\DELL\source\repos\Project1New\Project1New\obj\Debug\Project1New.CategoryProduct.resources
+C:\Users\DELL\source\repos\Project1New\Project1New\obj\Debug\Project1New.Categorytype.resources
+C:\Users\DELL\source\repos\Project1New\Project1New\obj\Debug\Project1New.FindInvoice.resources
+C:\Users\DELL\source\repos\Project1New\Project1New\obj\Debug\Project1New.Invoice.resources
+C:\Users\DELL\source\repos\Project1New\Project1New\obj\Debug\Project1New.Mainform.resources
+C:\Users\DELL\source\repos\Project1New\Project1New\obj\Debug\Project1New.Properties.Resources.resources
+C:\Users\DELL\source\repos\Project1New\Project1New\obj\Debug\Project1New.csproj.GenerateResource.cache
+C:\Users\DELL\source\repos\Project1New\Project1New\obj\Debug\Project1New.csproj.CoreCompileInputs.cache
+C:\Users\DELL\source\repos\Project1New\Project1New\obj\Debug\Project1New.exe
+C:\Users\DELL\source\repos\Project1New\Project1New\obj\Debug\Project1New.pdb
+C:\Users\DELL\source\repos\Project1New\Project1New\obj\Debug\Project1New.csproj.ResolveComReference.cache
+F:\IT K17\2019-2020\HK 2\Project 1\Project1New\Project1New\bin\Debug\Project1New.exe.config
+F:\IT K17\2019-2020\HK 2\Project 1\Project1New\Project1New\bin\Debug\Project1New.exe
+F:\IT K17\2019-2020\HK 2\Project 1\Project1New\Project1New\bin\Debug\Project1New.pdb
+F:\IT K17\2019-2020\HK 2\Project 1\Project1New\Project1New\obj\Debug\Project1New.csprojAssemblyReference.cache
+F:\IT K17\2019-2020\HK 2\Project 1\Project1New\Project1New\obj\Debug\Project1New.csproj.ResolveComReference.cache
+F:\IT K17\2019-2020\HK 2\Project 1\Project1New\Project1New\obj\Debug\Project1New.CategoryCustomer.resources
+F:\IT K17\2019-2020\HK 2\Project 1\Project1New\Project1New\obj\Debug\Project1New.CategoryEmployee.resources
+F:\IT K17\2019-2020\HK 2\Project 1\Project1New\Project1New\obj\Debug\Project1New.CategoryProduct.resources
+F:\IT K17\2019-2020\HK 2\Project 1\Project1New\Project1New\obj\Debug\Project1New.Categorytype.resources
+F:\IT K17\2019-2020\HK 2\Project 1\Project1New\Project1New\obj\Debug\Project1New.FindInvoice.resources
+F:\IT K17\2019-2020\HK 2\Project 1\Project1New\Project1New\obj\Debug\Project1New.Invoice.resources
+F:\IT K17\2019-2020\HK 2\Project 1\Project1New\Project1New\obj\Debug\Project1New.Mainform.resources
+F:\IT K17\2019-2020\HK 2\Project 1\Project1New\Project1New\obj\Debug\Project1New.Properties.Resources.resources
+F:\IT K17\2019-2020\HK 2\Project 1\Project1New\Project1New\obj\Debug\Project1New.csproj.GenerateResource.cache
+F:\IT K17\2019-2020\HK 2\Project 1\Project1New\Project1New\obj\Debug\Project1New.csproj.CoreCompileInputs.cache
+F:\IT K17\2019-2020\HK 2\Project 1\Project1New\Project1New\obj\Debug\Project1New.exe
+F:\IT K17\2019-2020\HK 2\Project 1\Project1New\Project1New\obj\Debug\Project1New.pdb
+F:\IT K17\2019-2020\HK 2\Project 1\Project1New\Project1New\obj\Debug\Project1New.Login.resources
+F:\IT K17\2019-2020\HK 2\Project 1\Project1\Project1\Project1New\bin\Debug\Project1New.exe.config
+F:\IT K17\2019-2020\HK 2\Project 1\Project1\Project1\Project1New\bin\Debug\Project1New.exe
+F:\IT K17\2019-2020\HK 2\Project 1\Project1\Project1\Project1New\bin\Debug\Project1New.pdb
+F:\IT K17\2019-2020\HK 2\Project 1\Project1\Project1\Project1New\obj\Debug\Project1New.csprojAssemblyReference.cache
+F:\IT K17\2019-2020\HK 2\Project 1\Project1\Project1\Project1New\obj\Debug\Project1New.csproj.ResolveComReference.cache
+F:\IT K17\2019-2020\HK 2\Project 1\Project1\Project1\Project1New\obj\Debug\Project1New.CategoryCustomer.resources
+F:\IT K17\2019-2020\HK 2\Project 1\Project1\Project1\Project1New\obj\Debug\Project1New.CategoryEmployee.resources
+F:\IT K17\2019-2020\HK 2\Project 1\Project1\Project1\Project1New\obj\Debug\Project1New.CategoryProduct.resources
+F:\IT K17\2019-2020\HK 2\Project 1\Project1\Project1\Project1New\obj\Debug\Project1New.Categorytype.resources
+F:\IT K17\2019-2020\HK 2\Project 1\Project1\Project1\Project1New\obj\Debug\Project1New.FindInvoice.resources
+F:\IT K17\2019-2020\HK 2\Project 1\Project1\Project1\Project1New\obj\Debug\Project1New.Invoice.resources
+F:\IT K17\2019-2020\HK 2\Project 1\Project1\Project1\Project1New\obj\Debug\Project1New.Login.resources
+F:\IT K17\2019-2020\HK 2\Project 1\Project1\Project1\Project1New\obj\Debug\Project1New.Mainform.resources
+F:\IT K17\2019-2020\HK 2\Project 1\Project1\Project1\Project1New\obj\Debug\Project1New.Properties.Resources.resources
+F:\IT K17\2019-2020\HK 2\Project 1\Project1\Project1\Project1New\obj\Debug\Project1New.csproj.GenerateResource.cache
+F:\IT K17\2019-2020\HK 2\Project 1\Project1\Project1\Project1New\obj\Debug\Project1New.csproj.CoreCompileInputs.cache
+F:\IT K17\2019-2020\HK 2\Project 1\Project1\Project1\Project1New\obj\Debug\Project1New.exe
+F:\IT K17\2019-2020\HK 2\Project 1\Project1\Project1\Project1New\obj\Debug\Project1New.pdb
