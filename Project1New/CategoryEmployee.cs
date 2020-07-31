@@ -83,6 +83,7 @@ namespace Project1New
             ResetValues();
             txt_emplID.Enabled = true;
             txt_emplID.Focus();
+
         }
 
         private void ResetValues()
@@ -189,6 +190,8 @@ namespace Project1New
             Function.RunSQL(sql);
             LoadDataGridView();
             ResetValues();
+            MessageBox.Show("Information edited!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
         }
 
         private void btn_cancle_Click(object sender, EventArgs e)

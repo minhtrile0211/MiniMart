@@ -357,6 +357,7 @@
             this.label12.Size = new System.Drawing.Size(128, 22);
             this.label12.TabIndex = 33;
             this.label12.Text = "Product Name:";
+            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // label11
             // 
@@ -394,7 +395,7 @@
             this.dgvInvoice.Name = "dgvInvoice";
             this.dgvInvoice.Size = new System.Drawing.Size(838, 171);
             this.dgvInvoice.TabIndex = 8;
-            this.dgvInvoice.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInvoice_CellContentClick);
+            this.dgvInvoice.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInvoice_CellClick);
             this.dgvInvoice.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInvoice_CellContentClick);
             this.dgvInvoice.Click += new System.EventHandler(this.btn_edit_Click);
             this.dgvInvoice.DoubleClick += new System.EventHandler(this.btn_add_Click);
@@ -482,6 +483,7 @@
             this.cbb_Find.Size = new System.Drawing.Size(232, 21);
             this.cbb_Find.TabIndex = 34;
             this.cbb_Find.DropDown += new System.EventHandler(this.cbb_Find_DropDown);
+            this.cbb_Find.SelectedIndexChanged += new System.EventHandler(this.cbb_Find_SelectedIndexChanged);
             // 
             // label17
             // 

@@ -75,6 +75,7 @@ namespace Project1New
             ResetValue();
             txt_typeID.Enabled = true;
             txt_typeID.Focus();
+
         }
 
         private void ResetValue()
@@ -142,6 +143,8 @@ namespace Project1New
             Class.Function.RunSQL(sql);
             LoadDataGridView();
             ResetValue();
+            MessageBox.Show("Information edited!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
         }
 
         private void btn_del_Click(object sender, EventArgs e)

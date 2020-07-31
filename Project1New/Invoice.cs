@@ -41,12 +41,35 @@ namespace Project1New
             dgvInvoice.Columns[2].Width = 80;
             dgvInvoice.Columns[3].Width = 90;
             dgvInvoice.Columns[4].Width = 90;
-            dgvInvoice.Columns[5].Width = 90; 
+            dgvInvoice.Columns[5].Width = 90;
             dgvInvoice.Columns[6].Width = 90;
             dgvInvoice.AllowUserToAddRows = false;
             dgvInvoice.EditMode = DataGridViewEditMode.EditProgrammatically;
         }
 
+        private void LoadDataGridView1()
+        {
+            string sql;
+            sql = "SELECT a.billNo,a.proID, b.proName, a.amount, a.unitprice, a.discount,a.price FROM billbackup AS a, product AS b WHERE a.billNo = N'" + txt_invoiceID.Text + "' AND a.proID=b.proID";
+            tbInvoicesale = Function.GetDataToTable(sql);
+            dgvInvoice.DataSource = tbInvoicesale;
+            dgvInvoice.Columns[0].HeaderText = "Invoice ID";
+            dgvInvoice.Columns[1].HeaderText = "Product ID";
+            dgvInvoice.Columns[2].HeaderText = "Product Name";
+            dgvInvoice.Columns[3].HeaderText = "Amount";
+            dgvInvoice.Columns[4].HeaderText = "Unit price";
+            dgvInvoice.Columns[5].HeaderText = "Discount (%)";
+            dgvInvoice.Columns[6].HeaderText = "Price(VND)";
+            dgvInvoice.Columns[0].Width = 150;
+            dgvInvoice.Columns[1].Width = 130;
+            dgvInvoice.Columns[2].Width = 80;
+            dgvInvoice.Columns[3].Width = 90;
+            dgvInvoice.Columns[4].Width = 90;
+            dgvInvoice.Columns[5].Width = 90;
+            dgvInvoice.Columns[6].Width = 90;
+            dgvInvoice.AllowUserToAddRows = false;
+            dgvInvoice.EditMode = DataGridViewEditMode.EditProgrammatically;
+        }
         private void Invoice_Load(object sender, EventArgs e)
         {
             btn_add.Enabled = true;
@@ -100,8 +123,8 @@ namespace Project1New
             cbb_EmpID.SelectedValue = Function.GetFieldValues(str);
             str = "SELECT cusID FROM bill WHERE billNo = N'" + txt_invoiceID.Text + "'";
             cbb_CusID.SelectedValue = Function.GetFieldValues(str);
-            //str = "SELECT proID FROM product WHERE proID = N'" + txt_invoiceID.Text + "'";
-            //cbb_proID.SelectedValue = Function.GetFieldValues(str);
+            str = "SELECT proID FROM product WHERE proID = N'" + cbb_proID.Text + "'";
+            cbb_proID.SelectedValue = Function.GetFieldValues(str);
             str = "SELECT total FROM bill WHERE billNo = N'" + txt_invoiceID.Text + "'";
             txt_Total.Text = Function.GetFieldValues(str);
         }
@@ -186,6 +209,16 @@ namespace Project1New
                 return;
             }
 
+            sql = "SELECT proID FROM billbackup WHERE proID=N'" + cbb_proID.SelectedValue + "' AND billNo = N'" + txt_invoiceID.Text.Trim() + "'";
+            if (Function.CheckKey(sql))
+            {
+                MessageBox.Show("This product already exists, you must enter another code", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ResetValuesrow();
+                cbb_proID.Focus();
+                return;
+            }
+
+
             sl = Convert.ToDouble(Function.GetFieldValues("SELECT amount FROM product WHERE proID = N'" + cbb_proID.SelectedValue + "'"));
             if (Convert.ToDouble(txt_Amount.Text) > sl)
             {
@@ -195,6 +228,8 @@ namespace Project1New
                 return;
             }
             sql = "INSERT INTO detailbill(billNo,proID,amount,unitprice, discount,price) VALUES(N'" + txt_invoiceID.Text.Trim() + "',N'" + cbb_proID.SelectedValue + "'," + txt_Amount.Text + "," + txt_Unitprice.Text + "," + txt_discount.Text + "," + txt_Price.Text + ")";
+            Function.RunSQL(sql);
+            sql = "INSERT INTO billbackup(billNo,proID,amount,unitprice, discount,price) VALUES(N'" + txt_invoiceID.Text.Trim() + "',N'" + cbb_proID.SelectedValue + "'," + txt_Amount.Text + "," + txt_Unitprice.Text + "," + txt_discount.Text + "," + txt_Price.Text + ")";
             Function.RunSQL(sql);
             LoadDataGridView();
             MessageBox.Show("The product added!", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -376,8 +411,8 @@ namespace Project1New
             exRange.Range["C9:E9"].MergeCells = true;
             exRange.Range["C9:E9"].Value = tbInvoice.Rows[0][5].ToString();
 
-            sql = "SELECT b.proName, a.amount, b.saleunitprice, a.discount, a.price " +
-                  "FROM detailbill AS a , product AS b WHERE a.billNo = N'" +
+            sql = "SELECT b.proName, a.amount, a.unitprice, a.discount, a.price " +
+                  "FROM billbackup AS a , product AS b WHERE a.billNo = N'" +
                   txt_invoiceID.Text + "' AND a.proID = b.proID";
             tbProduct = Function.GetDataToTable(sql);
 
@@ -428,6 +463,11 @@ namespace Project1New
             exApp.Visible = true;
         }
 
+        private void LoadInfoFind()
+        {
+
+        }
+
         private void btc_Find_Click(object sender, EventArgs e)
         {
             if (cbb_Find.Text == "")
@@ -437,9 +477,8 @@ namespace Project1New
                 return;
             }
             txt_invoiceID.Text = cbb_Find.Text;
-            
             LoadInfoHoaDon();
-            LoadDataGridView();
+            LoadDataGridView1();
             btn_del.Enabled = true;
             btn_Save.Enabled = true;
             btn_Print.Enabled = true;
@@ -672,6 +711,16 @@ namespace Project1New
         private void btnEdit_KeyDown(object sender, KeyEventArgs e)
         {
            
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbb_Find_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

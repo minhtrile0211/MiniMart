@@ -43,8 +43,6 @@ namespace Project1New
             txt_import.Text = "0";
             txt_sale.Text = "0";
             txt_amount.Enabled = true;
-            txt_import.Enabled = false;
-            txt_sale.Enabled = false;
             txt_Pic.Text = "";
             pictureBox1.Image = null;
             txt_Note.Text = "";
@@ -126,6 +124,7 @@ namespace Project1New
             txt_amount.Enabled = true;
             txt_import.Enabled = true;
             txt_sale.Enabled = true;
+
         }
 
         private void btn_Save_Click(object sender, EventArgs e)
@@ -179,6 +178,7 @@ namespace Project1New
 
         private void btn_edit_Click(object sender, EventArgs e)
         {
+            
             string sql;
             if (tbProduct.Rows.Count == 0)
             {
@@ -197,6 +197,24 @@ namespace Project1New
                 txt_proName.Focus();
                 return;
             }
+            if (txt_amount.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("You must enter an amount !", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txt_amount.Focus();
+                return;
+            }
+            if (txt_import.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("You must enter a import unit price !", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txt_import.Focus();
+                return;
+            }
+            if (txt_sale.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("You must enter a sale unit price !", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txt_sale.Focus();
+                return;
+            }
             if (cbb_Type.Text.Trim().Length == 0)
             {
                 MessageBox.Show("You must enter type", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -212,10 +230,12 @@ namespace Project1New
             sql = "UPDATE product SET proName=N'" + txt_proName.Text.Trim().ToString() +
                 "',proType=N'" + cbb_Type.SelectedValue.ToString() +
                 "',amount=" + txt_amount.Text +
-                ",picture='" + txt_Pic.Text + "',note=N'" + txt_Note.Text + "' WHERE proID=N'" + txt_proID.Text + "'";
+                ",importunitprice=" + txt_import.Text + ",saleunitprice='" + txt_sale.Text + "',picture='" + txt_Pic.Text + "',note=N'" + txt_Note.Text + "' WHERE proID=N'" + txt_proID.Text + "'";
             Function.RunSQL(sql);
             LoadDataGridView();
             ResetValues();
+            MessageBox.Show("Information edited!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
         }
 
         private void btn_del_Click(object sender, EventArgs e)
